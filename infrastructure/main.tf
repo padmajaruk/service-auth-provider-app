@@ -188,6 +188,7 @@ module "s2s-api" {
     MICROSERVICEKEYS_COH_COR                    = "${data.vault_generic_secret.cohcor.data["value"]}"
     MICROSERVICEKEYS_BULK_SCAN_PROCESSOR        = "${data.vault_generic_secret.bulkScanProcessor.data["value"]}"
     TESTING_SUPPORT_ENABLED                      = "${var.testing_support}"
+    MICROSERVICEKEYS_LOCAL_CACHE          = "AAAAAAAAAAAAAAAA"
   }
 }
 

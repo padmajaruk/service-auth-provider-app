@@ -24,10 +24,6 @@ variable "capacity" {
   default = "1"
 }
 
-variable "common_tags" {
-  type = "map"
-}
-
 variable "vault_section" {
   default     = "test"
 }
@@ -48,4 +44,8 @@ variable "subscription" {
 variable "testing_support" {
   default = "false"
   type = "string"
+}
+
+variable "common_tags" {
+  type = "map"
 }
