@@ -48,6 +48,11 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
         return unauthorized("Invalid authorization header");
     }
 
+    @ExceptionHandler(Exception.class)
+    protected ResponseEntity<ErrorDto> handleGeneralException() {
+        return status(500).body(new ErrorDto("Server error"));
+    }
+
     private ResponseEntity<ErrorDto> unauthorized(String message) {
         return status(UNAUTHORIZED).body(new ErrorDto(message));
     }
